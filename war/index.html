@@ -1,39 +1,30 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+<!DOCTYPE HTML>
 
+<HTML>
+<HEAD>
+<TITLE>お部屋</TITLE>
+<SCRIPT type="text/JavaScript">
 
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>お部屋</title>
-      <script type="text/javascript" src="/knock.js">//javascript呼び出し
-    </script> 
-  </head>
-  
-  <body>
-  <audio id="KnockSound" preload="auto">
-   <source src="/knocksound.wav" type="audio/wav">
-</audio>
-	<h1>川村のお部屋</h1>
-    <img src="gorila.JPG"  width="200" height="200" onclick="OnButtonClick(); ring();"/><br />
-    
-    <div id="output"></div>
+<!--
+function sound(name){
+var str = "";
+str = str + "<EMBED id = 'id_sound'";
+str = str + " SRC='" + name + "'";
+str = str + " AUTOSTART='true'";
+str = str + " HIDDEN='true'>";
+document.getElementById("id_sound").innerHTML = str;
+}
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+  <script type="text/javascript" src="/knock.js">
+    </script>
+  <h1>川村のお部屋</h1>
+<DIV id="id_sound" style="position:absolute; visibility:hidden"></DIV>
+<img src="gorila.JPG"  width="200" height="200" onClick = "sound('knocksound.wav');">
+<div id="output"></div>
 	<textarea name="chat" rows="10" cols="40">ここにチャットが表示されるはず</textarea><br>
    
-    <table>
-      <tr>
-      
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href="knock">Knock</a></td>
-      </tr>
-    </table>
-    
-  </body>
-</html>
+</BODY>
+</HTML>
